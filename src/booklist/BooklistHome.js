@@ -1,7 +1,6 @@
-
 import React, {useState, useEffect} from 'react';
 import {Container, Row, Col, Button, TabContent, TabPane, Nav,NavItem, NavLink, Card, CardTitle, CardText} from 'reactstrap';
-import BooklistList from './BoolistList';
+import BookList from './BooklistList';
 import BooklistUpdate from './BooklistUpdate';
 import classnames from 'classnames';
 import '../App.css';
@@ -13,7 +12,7 @@ const BooklistHome = (props) => {
 const [library, setBooklist] = useState([]);
 const [updateActive, setUpdateActive] = useState(false);
 const [bookToUpdate, setBookToUpdate] = useState({});
-const [fetchUrl, setFetchUrl] = useState(`http://localhost:3000/booklist/finished`);
+const [fetchUrl, setFetchUrl] = useState(`http://localhost:3000/bookworm/mylist`);
 
 const [activeTab, setActiveTab] = useState('1');
 const toggle = tab => {
@@ -87,16 +86,16 @@ useEffect(() => {
 
         <Col md='3'>
                 <Button color="success"  className="buttonAllBooks" onClick={() => {
-                 setFetchUrl(`http://localhost:3000/booklist/myList`)}}>ADD IN BOOKISH QUOTE</Button>
+                 setFetchUrl(`http://localhost:3000/bookworm/booklist`)}}>Look at All User Books</Button>
 
                  </Col>
 
                  <br/>
                  <br/>
                  <Col>
-
+{/* 
                 <Button color="success" className="buttonFinished" onClick={() => {
-                 setFetchUrl(`http://localhost:3000/booklist/finished`)}}>Books I have Finished</Button>
+                 setFetchUrl(`http://localhost:3000/bookworm/finished`)}}>Books I have Finished</Button> */}
 
                 </Col>
 
@@ -104,7 +103,7 @@ useEffect(() => {
 
                 <Row>
                 <Col sm='12'>
-                    <BooklistList library={library} editUpdateBook={editUpdateBook} updateOn={updateOn} fetchBooklist={fetchBooklist} token={props.token} />
+                    <BookList library={library} editUpdateBook={editUpdateBook} updateOn={updateOn} fetchBooklist={fetchBooklist} token={props.token} />
 
                     </Col>
 
