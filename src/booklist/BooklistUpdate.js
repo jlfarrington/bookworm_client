@@ -3,7 +3,7 @@ import {Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, Mo
 import '../App.css'
 
 
-const LibraryUpdate = (props) => {
+const BooklistUpdate = (props) => {
 const [updateAuthor, setUpdateAuthor] = useState(props.bookToUpdate.author);
 const [updateTitle, setUpdateTitle] = useState(props.bookToUpdate.title);
 const [updateFinished, setUpdateFinished] = useState(props.bookToUpdate.finished);
@@ -13,7 +13,7 @@ const [updateGenre, setUpdateGenre] = useState(props.bookToUpdate.genre);
 
 const bookUpdate = (event, book) => {
     event.preventDefault();
-    fetch(`http://localhost:3000/booklist/update/${props.bookToUpdate.id}`, {
+    fetch(`http://localhost:3000/bookworm/update/${props.bookToUpdate.id}`, {
         method: 'PUT',
         body: JSON.stringify({books: {author: updateAuthor, title: updateTitle, finished: updateFinished, tbr: updateTbr, genre: updateGenre}}),
         headers: new Headers({
@@ -21,7 +21,7 @@ const bookUpdate = (event, book) => {
             'Authorization': props.token
         })
     }).then((res) => {
-        props.fetchLibrary();
+        props.fetchBooklist();
         props.updateOff();
     })
 }
@@ -57,7 +57,7 @@ const toggle = () => setModal(!modal);
                     </FormGroup>
 
                     <FormGroup>
-                        <Label for="tbr">Edit TBR:</Label>
+                        <Label for="tbr">Edit To Be Read:</Label>
                         <Input type="select" name="tbr" value={updateTbr} onChange={(e) =>setUpdateTbr(e.target.value)}>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
@@ -80,4 +80,4 @@ const toggle = () => setModal(!modal);
      );
 }
  
-export default LibraryUpdate;
+export default BooklistUpdate;

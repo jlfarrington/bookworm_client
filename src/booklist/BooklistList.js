@@ -8,14 +8,14 @@ import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 const BookList = (props) => {
 
   const deleteBook = (book) => {
-    fetch(`http://localhost:3000/booklist/delete/${book.id}`, {
+    fetch(`http://localhost:3000/bookworm/delete/${book.id}`, {
         method: 'DELETE',
         headers: new Headers({
             'Content-Type': 'application/json',
             'Authorization': props.token
         })
     })
-    .then(() => props.fetchLibrary())
+    .then(() => props.fetchBooklist())
 }
 
 
@@ -51,7 +51,7 @@ const BookList = (props) => {
           <Th>Author</Th>
           <Th>Title</Th>
           <Th>Finished</Th>
-          <Th>TBR</Th>
+          <Th>To Be Read</Th>
           <Th>Genre</Th>
         </Tr>
       </Thead>

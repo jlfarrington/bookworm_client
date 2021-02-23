@@ -13,7 +13,7 @@ const BooklistCreate
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3000/booklist/create`, {
+        fetch(`http://localhost:3000/bookworm/create`, {
             method: 'POST',
             body: JSON.stringify({books: {title: title, author: author,  finished: finished, tbr: tbr, genre: genre}}),
             headers: new Headers({
@@ -28,7 +28,7 @@ const BooklistCreate
             setFinished(true);
             setTbr(false);
             setGenre('');
-            props.fetchLibrary()
+            props.fetchBooklist()
             props.toggle('1');
         })
     }
@@ -58,7 +58,7 @@ const BooklistCreate
             </FormGroup>
 
             <FormGroup>
-                <Label for="tbr"> TBR List</Label>
+                <Label for="tbr"> To Be Read List</Label>
                 <Input type="select" name="tbr" value={tbr} onChange={(e) => setTbr(e.target.value)}>
                     <option value="true">Yes</option>
                     <option value="false">No</option>
@@ -67,7 +67,7 @@ const BooklistCreate
 
             <FormGroup>
                 <Label for="genre"> Genre</Label>
-                <Input type="select" name="genre" value={tbr} onChange={(e) => setGenre(e.target.value)}></Input>
+                <Input type="text" name="genre" value={genre} onChange={(e) => setGenre(e.target.value)}></Input>
             </FormGroup>
 
             <Button type="submit" className="buttonSubmitCreate" >Submit</Button>

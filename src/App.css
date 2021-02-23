@@ -1,0 +1,85 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  .App {
+    text-align: center;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+    min-width: 100%;
+    margin: 0;
+  }
+  /* Navbar.js */
+  .navbar {
+    background-color: #2196f3;
+    padding: 10px;
+  }
+  .navbarBrand {
+    padding: 0.25em;
+  }
+  /* Login.js */
+  .formLogin {
+    background-color: #2196f3;
+    margin: 20px;
+    padding: 20px;
+  }
+  /* BooklistHome.js */
+  .containerBooklistHome {
+    background-color: rgb(243, 240, 236);
+  }
+  .buttonFinished {
+    margin-bottom: 10px;
+  }
+  /*BooklistList.js */
+  .buttonUpdate {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50px;
+    background-color: #9aca40;
+  }
+  .buttonDelete {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50px;
+  }
+  /* BooklistUpdate.js */
+  .buttonCancelUpdate {
+    float: right;
+  }
+  .buttonSubmitCreate {
+    float: left;
+  }
+  .nextPage {
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+    min-width: 100%;
+    margin: 0;
+    border: 2px solid #095DB1;
+  }
+  div.transbox {
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+  }
+  div.transbox h3 {
+    margin: 5%;
+    font-weight: bold;
+  }
+  /* Footer.js */
+  .footer {
+    padding: 10px;
+    padding-left: 50px ;
+    margin: 0px;
+    background-color: #2196f3; 
+  }
