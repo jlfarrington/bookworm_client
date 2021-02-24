@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button} from 'reactstrap';
-import '../App.css';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
+import {Col, Container, Row, Button} from 'reactstrap';
+import Book from './Book'
 
+import '../App.css';
+import '../booklist/booklistlist.css'
 
 const BookList = (props) => {
 
@@ -19,46 +19,28 @@ const BookList = (props) => {
 }
 
 
-  const bookMapper = () => {
-    return props.library.map((book, index) => {
-        return(
-         
-            <Tr key={index}>
-                <Th scope="row">{index + 1}</Th>
-                <Td>{book.author}</Td>
-                <Td>{book.title}</Td>
-                <Td>{book.finished ? "Yes" : "No"}</Td>
-                <Td>{book.Tbr ? "Yes" : "No"}</Td>
-                <Td>{book.genre}</Td>               
-                <Td>
-                  <Button outline color="success" className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
-
-                    <Button outline color="secondary " className="buttonDelete" onClick={() => {deleteBook(book)}}>Delete Book</Button>
-                </Td>
-                </Tr>        
-        )
-    })
-}
-
-
     return ( 
         <div>
-            {/* <h3>Library</h3> */}
-            <Table hover responsive style={{backgroundColor: 'white', opacity: '0.9', padding: '5px', textAlign: 'center', verticalAlign: 'middle', margin: '5px'}}>
-      <Thead>
-        <Tr >
-          <Th></Th>
-          <Th>Author</Th>
-          <Th>Title</Th>
-          <Th>Finished</Th>
-          <Th>To Be Read</Th>
-          <Th>Genre</Th>
-        </Tr>
-      </Thead>
-      <Tbody>
-        {bookMapper()}
-      </Tbody>
-    </Table>
+           <Container>
+             <Row>
+          {props.library.map((book,index) => {
+            return(
+              <Col key={index} lg="4" sm="6" xs="12" className="grid-column">
+               <div className="book-card">
+                  <Book author={book.author} title={book.title} tbr={book.tbr} genre={book.genre} finished={book.finished} deleteBook={deleteBook} updateOn={props.updateOn} editUpdateBook={props.editUpdateBook} />
+               
+                
+                    <div className="button-row">
+                      <Button className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
+                      <Button className="buttonDelete" onClick={() => {props.deleteBook(book)}}>Delete Book</Button>
+                    </div>
+                </div>
+               
+              </Col>
+            )
+          })}
+            </Row>
+          </Container>
         </div>
      );
 }
