@@ -1,14 +1,25 @@
 import React from 'react';
-import Register from './Register';
+import {Container, Row, Col} from 'reactstrap';
+import Signup from './Register';
 import Login from './Login';
+import '../App.css';
 
 const Start = (props) => {
-    return(
-        <div>
-            <Login props={props}/>
-            <Register props={props}/>
-        </div>
-    )
+    return ( 
+        <Container className="start-container">
+            <Row>
+                <Col md="15" >
+                   <Signup updateToken={props.updateToken} />
+                </Col>
+                
+                <Col md="15" className="login-col">
+                    <Login updateToken={props.updateToken} />
+                </Col>
+            </Row>
+         
+        </Container>
+     );
 }
-
+ 
 export default Start;
+
