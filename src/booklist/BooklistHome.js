@@ -33,7 +33,8 @@ const fetchBooklist = () => {
     }).then( (res) => res.json())
     .then((logBook) => {
         setBooklist(logBook)
-        
+        console.log(logBook)
+        console.log(library)
     })
 }
 

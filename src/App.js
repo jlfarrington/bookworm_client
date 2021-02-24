@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Start from './start/Start';
+
+import Navbar from './home/Navbar';
+import './App.css';
 
 import BooklistHome from './booklist/BooklistHome'
+import Auth from './auth/auth.js';
 
 const App = () => {
     const [sessionToken, setSessionToken] = useState('');
@@ -16,14 +19,20 @@ const App = () => {
         setSessionToken(newToken);
         console.log(newToken);
       }
+      const clearToken = () => {
+        localStorage.clear();
+        setSessionToken('');
+      }
+      const protectedViews = () => {
+        return (sessionToken === localStorage.getItem("token") ? <BooklistHome token={sessionToken}/> : <Auth updateToken={updateToken}/>)
+      }
 
 return(
-    <div>
-        <Start updateToken={updateToken}/>
-        <BooklistHome token={sessionToken}/>
-
+    <div> 
+        <Navbar clickLogout={clearToken}/>
+        {protectedViews()}
     </div>
-)
+);
 }
 
 export default App;

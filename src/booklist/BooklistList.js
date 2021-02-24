@@ -23,7 +23,7 @@ const BookList = (props) => {
         <div>
            <Container>
              <Row>
-          {props.library.map((book,index) => {
+          {/* {props.library.map((book,index) => {
             return(
               <Col key={index} lg="4" sm="6" xs="12" className="grid-column">
                <div className="book-card">
@@ -38,7 +38,7 @@ const BookList = (props) => {
                
               </Col>
             )
-          })}
+          })} */}
             </Row>
           </Container>
         </div>
