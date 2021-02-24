@@ -1,0 +1,29 @@
+.grid-column {
+    margin-top: 30px;
+    justify-content: center;
+    max-width: 
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* min-width: 325px;
+    min-height: 300px; */
+}
+
+
+.button-row {
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .book-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 225px;
+        min-height: 300px;
+    }
+}

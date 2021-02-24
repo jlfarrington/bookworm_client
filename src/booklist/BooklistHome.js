@@ -93,7 +93,7 @@ useEffect(() => {
                  <br/>
                  <br/>
                  <Col>
-{/* 
+          {/* 
                 <Button color="success" className="buttonFinished" onClick={() => {
                  setFetchUrl(`http://localhost:3000/bookworm/finished`)}}>Books I have Finished</Button> */}
 
@@ -114,7 +114,6 @@ useEffect(() => {
           <Row>
             <Col md="10">
               <Card body>
-                <CardTitle></CardTitle>
                 <CardText> 
                      <Col md='12'>
                     <BooklistCreate fetchBooklist={fetchBooklist} token={props.token} toggle={toggle} />
