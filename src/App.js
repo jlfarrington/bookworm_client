@@ -4,7 +4,7 @@ import Navbar from './home/Navbar';
 import './App.css';
 
 import BooklistHome from './booklist/BooklistHome'
-import Auth from './auth/auth.js';
+import Auth from './auth/Auth'
 
 const App = () => {
     const [sessionToken, setSessionToken] = useState('');

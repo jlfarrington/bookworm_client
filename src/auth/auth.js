@@ -1,22 +1,26 @@
-import React from "react";
-import {Container, Row, Col} from 'reactstrap'; 
-import Signup from './Signup';
-import Login from './Login';
+import { useState } from 'react';
+import Signup from './Signup'
+import Login from './Login'
+const Auth = () => {
+    const [toggle, setToggle] = useState(false)
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-const Auth = (props) => {
     return(
-        <Container className="auth-container">
-            <Row>
-                <Col md="6" className="login-col">
-                    <Login updateToken={props.updateToken}/>
-                </Col>
-            </Row>
-            <Row>
-                <Col md="6" className="signup-col">
-                    <Signup updateToken={props.updateToken}/>
-                </Col>
-            </Row>
-        </Container>
+        <div className="card" id="cardls">
+            {(toggle) ? <Login 
+            setPassword={setPassword} 
+            setUsername={setUsername} 
+            username={username} 
+            password={password} /> : <Signup 
+            setPassword={setPassword} 
+            setUsername={setUsername} 
+            username={username} 
+            password={password}/>}
+           
+                <br />
+            <p className="link" onClick={() => setToggle(!toggle)}>{(toggle) ? 'I Do Not Have An Account. Signup Here' : 'I Have An Account. Login Here.'}</p>
+        </div>
     )
 }
 

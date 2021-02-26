@@ -1,3 +1,4 @@
+
 body, html {
     height: 100%;
     margin: 0;
@@ -17,16 +18,66 @@ body, html {
   .navbar {
     background-color: #2196f3;
     padding: 10px;
+    border: 1px solid black;
   }
   .navbarBrand {
     padding: 0.25em;
   }
-  /* Login.js */
-  .formLogin {
-    background-color: #2196f3;
-    margin: 20px;
-    padding: 20px;
+  #brand{
+    color: #9aca40;
+    font: 24pt sans-serif;
+    -webkit-text-stroke: .5px black;
+    font-weight: 900;
   }
+  #logoutbutton {
+    background-color: #9aca40;
+  }
+  /*Signup.js*/
+  #cardls{
+    border-radius: 5px 5px 5px 5px;;
+  }
+  
+  .fp {
+    display: inline-block;
+  }
+  #fpbutton {
+    background-color: #9aca40;
+    text-align: center;
+  
+  }
+
+  #font{
+    background-color: #afbaca;
+  }
+  #label{
+    color: #0d47a1;
+    font-weight: 600;
+
+  }
+  #title {
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-indent: 30pt;
+  }
+  /* Login.js */
+  .card {
+    width: 500px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 10px 10px 10px grey;
+    padding: 50px 25px 20px 25px;
+  }
+  
+  .link {
+    text-decoration: underline;
+    color: #0d47a1;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+  }
+
   /* BooklistHome.js */
   .containerBooklistHome {
     background-color: rgb(243, 240, 236);

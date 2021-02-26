@@ -19,23 +19,23 @@ const Signup = (props) => {
             props.updateToken(data.sessionToken)
         })} 
     return(
-        <div>
-            <h1>Sign Up</h1>
+        <div class="fp">
+            <h1 id="title">Sign Up</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label htmlFor="username">Username</Label>
-                    <Input onChange={(e)=> setUsername(e.target.value)} 
+                    <Label id="label" htmlFor="username">Email</Label>
+                    <Input id="font" onChange={(e)=> setUsername(e.target.value)} 
                     name="username"
                     placeholder="Email Required"
                     value={username}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="password">Password</Label>
-                    <Input onChange={(e) => setPassword(e.target.value)}
+                    <Label id="label" htmlFor="password">Password</Label>
+                    <Input id="font" onChange={(e) => setPassword(e.target.value)}
                     placeholder="Password Required"
                     name="password" value={password}/>
                 </FormGroup>
-                <Button type="submit">Sign up</Button>
+                <Button id="fpbutton" type="submit">Sign up</Button>
             </Form>
         </div>
     )
