@@ -16,7 +16,7 @@ const Signup = (props) => {
         }).then(
             (response) => response.json()
         ).then((data) => {
-            props.updateToken(data.sessionToken)
+            props.updateToken(data.sessionToken, data.user)
         })} 
     return(
         <div class="fp">

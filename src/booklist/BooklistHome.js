@@ -13,7 +13,7 @@ const [library, setBooklist] = useState([]);
 const [updateActive, setUpdateActive] = useState(false);
 const [bookToUpdate, setBookToUpdate] = useState({});
 const [fetchUrl, setFetchUrl] = useState(`http://localhost:3000/bookworm/mylist`);
-const [toggleView, setToggleView] = useState(false);
+const [toggleView, setToggleView] = useState(true);
 const [activeTab, setActiveTab] = useState('1');
 const toggle = tab => {
     if(activeTab !== tab) setActiveTab(tab);
@@ -101,7 +101,7 @@ useEffect(() => {
 
                 <Row>
                 <Col sm='12'>
-                    <BookList library={library} editUpdateBook={editUpdateBook} updateOn={updateOn} fetchBooklist={fetchBooklist} token={props.token} />
+                    <BookList library={library} editUpdateBook={editUpdateBook} updateOn={updateOn} fetchBooklist={fetchBooklist} token={props.token} id={props.id} />
 
                     </Col>
 
