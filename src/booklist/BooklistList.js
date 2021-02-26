@@ -32,7 +32,7 @@ const BookList = (props) => {
                 
                     <div className="button-row">
                       <Button className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
-                      <Button className="buttonDelete" onClick={() => {props.deleteBook(book)}}>Delete Book</Button>
+                      <Button className="buttonDelete" onClick={() => {deleteBook(book)}}>Delete Book</Button>
                     </div>
                 </div>
                

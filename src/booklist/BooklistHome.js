@@ -13,7 +13,7 @@ const [library, setBooklist] = useState([]);
 const [updateActive, setUpdateActive] = useState(false);
 const [bookToUpdate, setBookToUpdate] = useState({});
 const [fetchUrl, setFetchUrl] = useState(`http://localhost:3000/bookworm/mylist`);
-
+const [toggleView, setToggleView] = useState(false);
 const [activeTab, setActiveTab] = useState('1');
 const toggle = tab => {
     if(activeTab !== tab) setActiveTab(tab);
@@ -24,18 +24,16 @@ useEffect(() => {
 }, [fetchUrl]);
 
 const fetchBooklist = () => {
-    fetch(fetchUrl, {
-        method: 'GET',
-        headers: new Headers ({
-            'Content-Type': 'application/json',
-            'Authorization': props.token
-        })
-    }).then( (res) => res.json())
-    .then((logBook) => {
-        setBooklist(logBook)
-        
+  fetch(fetchUrl, {
+    method: 'GET',
+    headers: new Headers({
+      'Content-Type': 'application/json',
+      'Authorization': props.token
     })
+  }).then((res) => res.json())
+  .then((logBook) => setBooklist(logBook))
 }
+
 
 const editUpdateBook = (book) => {
     setBookToUpdate(book);
@@ -85,8 +83,8 @@ useEffect(() => {
           </Col>
 
         <Col md='3'>
-                <Button color="success"  className="buttonAllBooks" onClick={() => {
-                 setFetchUrl(`http://localhost:3000/bookworm/booklist`)}}>Look at All User Books</Button>
+                <Button color="success"  className="buttonAllBooks" onClick={() => {setToggleView(!toggleView);
+                  (toggleView) ? setFetchUrl(`http://localhost:3000/bookworm/booklist`) : setFetchUrl(`http://localhost:3000/bookworm/mylist`)}}>{(toggleView) ? 'Look at All User Books' : 'Go Back to My Library'}</Button>
 
                  </Col>
 
