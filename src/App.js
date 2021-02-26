@@ -9,6 +9,7 @@ import BooklistHome from './booklist/BooklistHome'
 
 const App = () => {
     const [sessionToken, setSessionToken] = useState('');
+    const [id, setId] = useState(0)
     
     useEffect(() => {
         if (localStorage.getItem('token')) {
@@ -16,17 +17,26 @@ const App = () => {
         }
       }, []);
       
-      const updateToken = (newToken) => {
+      useEffect(() => {
+        if (localStorage.getItem('id')) {
+          setId(localStorage.getItem('id'));
+        }
+      }, []);
+      
+      const updateToken = (newToken, newId) => {
         localStorage.setItem('token', newToken);
+        localStorage.setItem('id', newId);
         setSessionToken(newToken);
+        setId(newId)
         console.log(newToken);
+        console.log(newId)
       }
       const clearToken = () => {
         localStorage.clear();
         setSessionToken('');
       }
       const protectedViews = () => {
-        return (sessionToken === localStorage.getItem("token") ? <BooklistHome token={sessionToken}/> : <Auth updateToken={updateToken}/>)
+        return (sessionToken === localStorage.getItem("token") ? <BooklistHome token={sessionToken} id={id}/> : <Auth updateToken={updateToken}/>)
       }
 
 return(
