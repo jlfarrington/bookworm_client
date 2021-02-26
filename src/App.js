@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 import Navbar from './home/Navbar';
+import Auth from './auth/auth'
 import './App.css';
 
 import BooklistHome from './booklist/BooklistHome'
-import Auth from './auth/Auth'
+
 
 const App = () => {
     const [sessionToken, setSessionToken] = useState('');

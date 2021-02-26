@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Signup from './Signup'
 import Login from './Login'
+
 const Auth = () => {
     const [toggle, setToggle] = useState(false)
     const [username, setUsername] = useState('');
