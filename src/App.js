@@ -11,9 +11,10 @@ const App = () => {
     
     useEffect(() => {
         if (localStorage.getItem('token')) {
-          setSessionToken(localStorage.getItem('token'))
+          setSessionToken(localStorage.getItem('token'));
         }
       }, []);
+      
       const updateToken = (newToken) => {
         localStorage.setItem('token', newToken);
         setSessionToken(newToken);

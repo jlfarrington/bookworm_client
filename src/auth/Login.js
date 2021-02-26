@@ -40,10 +40,6 @@ const Login = (props) => {
                     placeholder="Email Required"
                     value={username}/>
                 </FormGroup>
-                </Form>
-            </Container>
-            <Container>
-                <Form>
                 <FormGroup id="Login">
                     <Label id="label" htmlFor="password">Password</Label>
                     <Input id="font" onChange={(e) => setPassword(e.target.value)}
