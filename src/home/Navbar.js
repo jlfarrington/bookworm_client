@@ -18,7 +18,7 @@ const Sitebar = (props) => {
     setIsOpen(newIsOpen)}
 
     return (
-        <Navbar color="#0d47a1" light expand="md">
+        <Navbar id="nav" light expand="md">
             <NavbarBrand id="brand" href="/">BookWorm</NavbarBrand>
             <NavbarToggler onClick={toggle}/>
             <Collapse isOpen={isOpen} navbar>
