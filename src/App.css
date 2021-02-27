@@ -1,4 +1,6 @@
-
+body {
+  background-image:radial-gradient(transparent, #9aca40);
+}
 body, html {
     height: 100%;
     margin: 0;
@@ -16,7 +18,7 @@ body, html {
   }
   /* Navbar.js */
   .navbar {
-    background-color: #2196f3;
+    background-image: linear-gradient(to left,#2196f3 , #0d47a1);
     padding: 10px;
     border: 1px solid black;
   }
@@ -55,9 +57,9 @@ body, html {
 
   }
   #title {
-    color: white;
-    -webkit-text-stroke: 1px black;
-    text-indent: 30pt;
+    color:#9aca40;
+    -webkit-text-stroke: 1px #0d47a1;
+    text-align: center;
   }
   /* Login.js */
   .card {
