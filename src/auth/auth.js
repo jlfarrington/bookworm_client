@@ -7,7 +7,7 @@ const Auth = (props) => {
     
 
     return(
-        <div className="card" id="cardls">
+        <div className="card-login" id="cardls">
             {(toggle) ? <Login updateToken={props.updateToken}/> : <Signup updateToken={props.updateToken}/>}
            
                 <br />
