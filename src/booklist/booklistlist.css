@@ -1,6 +1,7 @@
 .grid-column {
     margin-top: 30px;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .book-card {
@@ -16,8 +17,14 @@
 .button-row {
     text-align: center;
     display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
 }
 
+.copyBtn {
+    display: flex;
+    justify-content: center;
+}
 
 
 @media only screen and (max-width: 768px) {

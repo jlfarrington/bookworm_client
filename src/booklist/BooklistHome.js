@@ -15,6 +15,7 @@ const [bookToUpdate, setBookToUpdate] = useState({});
 const [fetchUrl, setFetchUrl] = useState(`http://localhost:3000/bookworm/mylist`);
 const [toggleView, setToggleView] = useState(true);
 const [activeTab, setActiveTab] = useState('1');
+const [finishedToggle, setFinishedToggle] = useState(true);
 const toggle = tab => {
     if(activeTab !== tab) setActiveTab(tab);
   }
@@ -83,7 +84,7 @@ useEffect(() => {
           </Col>
 
         <Col md='3'>
-                <Button color="success"  className="buttonAllBooks" onClick={() => {setToggleView(!toggleView);
+                <Button color="success"  className="buttonAllBooks" onClick={() => {setToggleView(!toggleView); setFinishedToggle(!finishedToggle);
                   (toggleView) ? setFetchUrl(`http://localhost:3000/bookworm/booklist`) : setFetchUrl(`http://localhost:3000/bookworm/mylist`)}}>{(toggleView) ? 'Look at All User Books' : 'Go Back to My Library'}</Button>
 
                  </Col>
@@ -91,10 +92,9 @@ useEffect(() => {
                  <br/>
                  <br/>
                  <Col>
-          {/* 
-                <Button color="success" className="buttonFinished" onClick={() => {
-                 setFetchUrl(`http://localhost:3000/bookworm/finished`)}}>Books I have Finished</Button> */}
-
+              
+                {(finishedToggle) ? <Button color="success" className="buttonFinished" onClick={() => {
+                 setFetchUrl(`http://localhost:3000/bookworm/finished`); setFinishedToggle(!finishedToggle); setToggleView(!toggleView);}}>Books I have Finished</Button> : <div></div>}
                 </Col>
 
                 </Row>
