@@ -25,7 +25,7 @@ const Login = (props) => {
         }) .then(
             (response) => response.json()
         ) .then((data) => {
-            props.updateToken(data.sessionToken, data.user)
+            props.updateToken(data.sessionToken, data.user.id)
         })}
     return(
         <div class="fp">
