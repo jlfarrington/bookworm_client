@@ -21,7 +21,7 @@ const BookList = (props) => {
 
     return ( 
         <div>
-           <Container>
+           <Container id="book-grid-container">
              <Row>
           {props.library.map((book,index) => {
             return(
@@ -29,11 +29,11 @@ const BookList = (props) => {
                <div className="book-card">
                   <Book author={book.author} title={book.title} tbr={book.tbr} genre={book.genre} finished={book.finished} deleteBook={deleteBook} updateOn={props.updateOn} editUpdateBook={props.editUpdateBook} />
                
-                
+                {(book.owner === props.id) ?
                     <div className="button-row">
                       <Button className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
-                      <Button className="buttonDelete" onClick={() => {props.deleteBook(book)}}>Delete Book</Button>
-                    </div>
+                      <Button className="buttonDelete" onClick={() => {deleteBook(book)}}>Delete Book</Button></div> : <div><Button className="copyBook">Add to my Library</Button></div>
+                    }
                 </div>
                
               </Col>

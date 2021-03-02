@@ -1,13 +1,13 @@
 .grid-column {
     margin-top: 30px;
     justify-content: center;
-    max-width: 
 }
 
 .book-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     /* min-width: 325px;
     min-height: 300px; */
 }
@@ -15,7 +15,9 @@
 
 .button-row {
     text-align: center;
+    display: flex;
 }
+
 
 
 @media only screen and (max-width: 768px) {
