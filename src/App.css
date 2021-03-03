@@ -44,27 +44,53 @@ body, html {
     box-shadow: 10px 10px 10px grey;
     padding: 50px 25px 20px 25px;
   }
+  .card-login{
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    text-align: center;
+    
+    
+    
+  }
   
   .fp {
-    display: inline-block;
+    display: inline-block;;
   }
-  #fpbutton {
+  #fpbuttonone {
     background-color: #9aca40;
     text-align: center;
-  
+    color: #0d47a1;
+  }
+  #fpbuttontwo {
+    background-color: #0d47a1;
+    text-align: center;
+    color: #9aca40;
   }
 
   #font{
     background-color: #afbaca;
   }
+
   #label{
     color: #0d47a1;
     font-weight: 600;
+    float: left;
+    padding-top: 20px;
+    display: inline;
 
   }
-  #title {
+  #titleone {
     color:#9aca40;
     -webkit-text-stroke: 1px #0d47a1;
+    text-align: center;
+  }
+  #titletwo{
+    color: #0d47a1;
+    -webkit-text-stroke: 1px black;
     text-align: center;
   }
   /* Login.js */
@@ -75,6 +101,8 @@ body, html {
     cursor: pointer;
     text-align: center;
     font-weight: 600;
+    padding-top: 70pt;
+    
   }
 
   /* BooklistHome.js */
