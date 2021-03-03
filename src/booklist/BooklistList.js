@@ -18,6 +18,21 @@ const BookList = (props) => {
     .then(() => props.fetchBooklist())
 }
 
+const copyBook = (book) => {
+  fetch(`http://localhost:3000/bookworm/create`, {
+      method: 'POST',
+      body: JSON.stringify({books: {title: book.title, author: book.author,  finished: book.finished, tbr: book.tbr, genre: book.genre}}),
+      headers: new Headers({
+          'Content-Type': 'application/json',
+          'Authorization': props.token
+      })
+  }).then((res) => res.json())
+  .then((logBook) => {
+      console.log(logBook)
+      props.fetchBooklist()
+  })
+}
+
 
     return ( 
         <div>
@@ -31,8 +46,8 @@ const BookList = (props) => {
                
                 {(book.owner === props.id) ?
                     <div className="button-row">
-                      <Button className="buttonUpdate" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
-                      <Button className="buttonDelete" onClick={() => {deleteBook(book)}}>Delete Book</Button></div> : <div><Button className="copyBook">Add to my Library</Button></div>
+                      <Button color="warning" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
+                      <Button color="danger" onClick={() => {deleteBook(book)}}>Delete Book</Button></div> : <div className="copyBtn"><Button color="primary" onClick={() => copyBook(book)}>Add to my Library</Button></div>
                     }
                 </div>
                

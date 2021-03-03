@@ -51,16 +51,16 @@ const toggle = () => setModal(!modal);
                     <FormGroup>
                         <Label for="finished">Edit Finished:</Label>
                         <Input type="select" name="finished" value={updateFinished} onChange={(e) =>setUpdateFinished(e.target.value)}>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
                         </Input>
                     </FormGroup>
 
                     <FormGroup>
                         <Label for="tbr">Edit To Be Read:</Label>
                         <Input type="select" name="tbr" value={updateTbr} onChange={(e) =>setUpdateTbr(e.target.value)}>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
                         </Input>
                     </FormGroup>
 

@@ -25,7 +25,7 @@ const BooklistCreate
             console.log(logBook)
             setAuthor('');
             setTitle('');
-            setFinished(true);
+            setFinished(false);
             setTbr(false);
             setGenre('');
             props.fetchBooklist()
@@ -52,8 +52,8 @@ const BooklistCreate
             <FormGroup>
                 <Label for="finished">Finished</Label>
                 <Input type="select" name="finished" value={finished} onChange={(e) => setFinished(e.target.value)}>
-                    <option value="true">Yes</option>
                     <option value="false">No</option>
+                    <option value="true">Yes</option>
                 </Input>
             </FormGroup>
 
