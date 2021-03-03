@@ -1,0 +1,135 @@
+body {
+  background-image:radial-gradient(transparent, #9aca40);
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  .App {
+    text-align: center;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+    min-width: 100%;
+    margin: 0;
+  }
+  /* Navbar.js */
+  .navbar {
+    background-image: linear-gradient(to left,#2196f3 , #0d47a1);
+    padding: 10px;
+    border: 1px solid black;
+  }
+  .navbarBrand {
+    padding: 0.25em;
+  }
+  #brand{
+    color: #9aca40;
+    font: 24pt sans-serif;
+    -webkit-text-stroke: .5px black;
+    font-weight: 900;
+  }
+  #logoutbutton {
+    background-color: #9aca40;
+  }
+  /*Signup.js*/
+  #cardls{
+    width: 500px;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 10px 10px 10px grey;
+    padding: 50px 25px 20px 25px;
+  }
+  
+  .fp {
+    display: inline-block;
+  }
+  #fpbutton {
+    background-color: #9aca40;
+    text-align: center;
+  
+  }
+
+  #font{
+    background-color: #afbaca;
+  }
+  #label{
+    color: #0d47a1;
+    font-weight: 600;
+
+  }
+  #title {
+    color:#9aca40;
+    -webkit-text-stroke: 1px #0d47a1;
+    text-align: center;
+  }
+  /* Login.js */
+
+  .link {
+    text-decoration: underline;
+    color: #0d47a1;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* BooklistHome.js */
+  .containerBooklistHome {
+    background-color: rgb(243, 240, 236);
+  }
+  .buttonFinished {
+    margin-bottom: 10px;
+  }
+  /*BooklistList.js */
+  .buttonUpdate {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50px;
+    background-color: #9aca40;
+  }
+  .buttonDelete {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50px;
+  }
+  /* BooklistUpdate.js */
+  .buttonCancelUpdate {
+    float: right;
+  }
+  .buttonSubmitCreate {
+    float: left;
+  }
+  .nextPage {
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+    min-width: 100%;
+    margin: 0;
+    border: 2px solid #095DB1;
+  }
+  div.transbox {
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+  }
+  div.transbox h3 {
+    margin: 5%;
+    font-weight: bold;
+  }
+  /* Footer.js */
+  .footer {
+    padding: 10px;
+    padding-left: 50px ;
+    margin: 0px;
+    background-color: #2196f3; 
+  }
