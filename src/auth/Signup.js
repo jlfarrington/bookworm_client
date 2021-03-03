@@ -22,7 +22,7 @@ const Signup = (props) => {
 
     return(
         <div class="fp">
-            <h1 id="title">Sign Up</h1>
+            <h1 id="titletwo">Sign Up</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label id="label" htmlFor="email">Email</Label>
@@ -44,7 +44,7 @@ const Signup = (props) => {
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,15}"
                     />
                 </FormGroup>
-                <Button id="fpbutton" to="./Login" type="submit">Sign up</Button>
+                <Button id="fpbuttontwo" to="./Login" type="submit">Sign up</Button>
             </Form>
         </div>
     )

@@ -30,7 +30,7 @@ const Login = (props) => {
     return(
         <div class="fp">
             <Container>
-            <h1 id="title">Log in</h1>
+            <h1 id="titleone">Log in</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label id="label" htmlFor="email">Email</Label>
@@ -47,7 +47,7 @@ const Login = (props) => {
                     value={password}
                     type="password"/>
                 </FormGroup>
-                <Button  id="fpbutton"type="submit">Log in</Button>
+                <Button  id="fpbuttonone"type="submit">Log in</Button>
             </Form>
             </Container>
         </div>
