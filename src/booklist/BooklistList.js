@@ -1,5 +1,5 @@
 import React from 'react';
-import {Col, Container, Row, Button} from 'reactstrap';
+import {Col, Container, Row, Button, Alert} from 'reactstrap';
 import Book from './Book'
 
 import '../App.css';
@@ -30,8 +30,10 @@ const copyBook = (book) => {
   .then((logBook) => {
       console.log(logBook)
       props.fetchBooklist()
-  })
+      alert("book added successfully!")
+  });
 }
+
 
 
     return ( 
@@ -47,7 +49,7 @@ const copyBook = (book) => {
                 {(book.owner === props.id) ?
                     <div className="button-row">
                       <Button color="warning" onClick={() => {props.editUpdateBook(book); props.updateOn()}}>Update Book</Button>
-                      <Button color="danger" onClick={() => {deleteBook(book)}}>Delete Book</Button></div> : <div className="copyBtn"><Button color="primary" onClick={() => copyBook(book)}>Add to my Library</Button></div>
+                      <Button color="danger" onClick={() => {deleteBook(book)}}>Delete Book</Button></div> : <div className="copyBtn"><Button color="primary" onClick={() => copyBook(book)} >Add to my Library</Button></div>
                     }
                 </div>
                
