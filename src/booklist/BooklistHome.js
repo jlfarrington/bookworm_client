@@ -38,7 +38,6 @@ const fetchBooklist = () => {
 
 const editUpdateBook = (book) => {
     setBookToUpdate(book);
-    console.log(book);
 }
 
 const updateOn = () => {
@@ -49,9 +48,6 @@ const updateOff = () => {
     setUpdateActive(false);
 }
 
-useEffect(() => {
-    fetchBooklist();
-}, [])
 
     return ( 
         <Container className="themed-container containerBooklistHome" fluid="lg" >

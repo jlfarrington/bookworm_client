@@ -11,7 +11,7 @@ const [updateTbr, setUpdateTbr] = useState(props.bookToUpdate.tbr);
 const [updateGenre, setUpdateGenre] = useState(props.bookToUpdate.genre);
 
 
-const bookUpdate = (event, book) => {
+const bookUpdate = (event) => {
     event.preventDefault();
     fetch(`http://localhost:3000/bookworm/update/${props.bookToUpdate.id}`, {
         method: 'PUT',
@@ -71,7 +71,7 @@ const toggle = () => setModal(!modal);
 
                     <Button type="submit">Update</Button> 
                  
-                    <Button outline color="secondary" className="buttonCancelUpdate">Cancel</Button>
+                   
                 </Form>
             </ModalBody>
         
