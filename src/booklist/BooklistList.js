@@ -28,7 +28,6 @@ const copyBook = (book) => {
       })
   }).then((res) => res.json())
   .then((logBook) => {
-      console.log(logBook)
       props.fetchBooklist()
       alert("book added successfully!")
   });
