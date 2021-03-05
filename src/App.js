@@ -28,8 +28,6 @@ const App = () => {
         localStorage.setItem('id', newId);
         setSessionToken(newToken);
         setId(newId)
-        console.log(newToken);
-        console.log(newId)
       }
       const clearToken = () => {
         localStorage.clear();

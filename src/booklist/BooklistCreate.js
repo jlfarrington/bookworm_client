@@ -22,7 +22,6 @@ const BooklistCreate
             })
         }).then((res) => res.json())
         .then((logBook) => {
-            console.log(logBook)
             setAuthor('');
             setTitle('');
             setFinished(false);
