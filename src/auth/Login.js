@@ -28,20 +28,20 @@ const Login = (props) => {
             props.updateToken(data.sessionToken, data.user.id)
         })}
     return(
-        <div class="fp">
+        <div className="fp">
             <Container>
             <h1 id="titleone">Log in</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label id="label" htmlFor="email">Email</Label>
-                    <Input id="font" onChange={(e) => setEmail(e.target.value)} 
+                    <Input id="font1" onChange={(e) => setEmail(e.target.value)} 
                     name="email" 
                     placeholder="Email Required"
                     value={email}/>
                 </FormGroup>
                 <FormGroup id="Login">
                     <Label id="label" htmlFor="password">Password</Label>
-                    <Input id="font" onChange={(e) => setPassword(e.target.value)}
+                    <Input id="font2" onChange={(e) => setPassword(e.target.value)}
                     name="password" 
                     placeholder="Password Required"
                     value={password}

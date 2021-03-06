@@ -15,11 +15,9 @@ import {
           <CardTitle tag="h5">{title}</CardTitle>
           <CardSubtitle tag="h6" className="mb-2 text-muted">{author}</CardSubtitle>
           <CardText>
-              <ul>
                 <li>{genre}</li>
                 <li>{finished ? "finished" : "not quite finished"}</li>
                 <li>{tbr ? "To Be Read" : "Not on my To Be Read List"}</li>
-              </ul>
           </CardText>
         </CardBody>
       </Card>

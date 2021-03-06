@@ -21,12 +21,12 @@ const Signup = (props) => {
         })} 
 
     return(
-        <div class="fp">
+        <div className="fp">
             <h1 id="titletwo">Sign Up</h1>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
                     <Label id="label" htmlFor="email">Email</Label>
-                    <Input id="font" onChange={(e)=> setEmail(e.target.value)} 
+                    <Input id="font1" onChange={(e)=> setEmail(e.target.value)} 
                     name="email"
                     placeholder="Email Required"
                     value={email}
@@ -35,7 +35,7 @@ const Signup = (props) => {
                 </FormGroup>
                 <FormGroup>
                     <Label id="label" htmlFor="password">Password</Label>
-                    <Input id="font" onChange={(e) => setPassword(e.target.value)}
+                    <Input id="font2" onChange={(e) => setPassword(e.target.value)}
                     placeholder="Password Required"
                     name="password" 
                     value={password}
