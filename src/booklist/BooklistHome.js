@@ -76,7 +76,7 @@ const updateOff = () => {
         <Row>
 
           <Col md='10' style={{color: 'black', padding: '20px', margin: '10px'}}>
-            <div class="quote">
+            <div className="quote">
             <h4>A reader lives a thousand lives before he dies.</h4>
             <h1>George R.R. Martin</h1>
             </div>
