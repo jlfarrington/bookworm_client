@@ -15,4 +15,4 @@ Bookworm is an app created by Pauline McGinnis, Jennifer Farrington, Tracey Brad
 
 This app was created in React and demonstrates full CRUD (Create, Read, Update, Delete) functionality.
 
-View the deployed app here: https://gp1-bookworm-client.herokuapp.com/
+View the deployed app <a href="https://gp1-bookworm-client.herokuapp.com/">Here</a>
